@@ -79,11 +79,30 @@
 				</div>
 				<div class="form-group">
 					<label for="comision">Comisión o Comité:</label>
-					<input type="text" id="comision" name="comision_comite">
+					<select id="comision" name="comision">
+						<option value="" disabled selected> Selecciona la Comisión o Comité..</option>
+						<option value = "Comisión Ambiental de la Megalópolis"> Comisión Ambiental de la Megalópolis</option> 
+						<option value = "Comisión Asuntos Frontera Norte"> Comisión Asuntos Frontera Norte</option>
+						<option value = "Comisión Bicamaral de Seguridad Nacional"> Comisión Bicamaral de Seguridad Nacional</option>
+						<option value = "Comisión Bicamaral del Canal de Televisión del Congreso de la Unión"> Comisión Bicamaral del Canal de Televisión del Congreso de la Unión</option>
+						<option value = "Comisión Bicamaral del Sistema de Bibliotecas"> Comisión Bicamaral del Sistema de Bibliotecas</option>
+						<option value = "Comisión de Administración del Senado"> Comisión de Administración del Senado</option>
+						<option value = "Comisión de Agricultura y Ganadería"> Comisión de Agricultura y Ganadería</option>
+					</select>
 				</div>
 				<div class="form-group">
 					<label for="grupo">Grupo Parlamentario:</label>
-					<input type="text" id="grupo" name="grupo_parlamentario">
+					<select id="gpo" id="grupo" name="grupo">
+						<option value="" disabled selected>Selecciona grupo parlamentario...</option>
+						<option value = "Grupo Independiente"> Grupo Independiente</option>
+						<option value = "Grupo Parlamentario MORENA"> Grupo Parlamentario MORENA</option>
+						<option value = "Grupo Parlamentario Movimiento Ciudadano"> Grupo Parlamentario Movimiento Ciudadano</option>
+						<option value = "Grupo Parlamentario PAN"> Grupo Parlamentario PAN</option>
+						<option value = "Grupo Parlamentario PRD"> Grupo Parlamentario PRD</option>
+						<option value = "Grupo Parlamentario PRI"> Grupo Parlamentario PRI</option>
+						<option value = "Grupo Parlamentario PT"> Grupo Parlamentario PT</option>
+						<option value = "Grupo Parlamentario PVEM"> Grupo Parlamentario PVEM</option>
+					</select>
 				</div>
 			</div>
 		</fieldset>
@@ -121,6 +140,8 @@
 		{
 			anchoLegis = document.getElementById("nombre").style.width;
 			document.getElementById("area").style.width = anchoLegis;
+			document.getElementById("comision").style.width = anchoLegis;
+			document.getElementById("grupo").style.width = anchoLegis;
 			//alert("ancho =",anchoLegis);
 		}
 	</script>

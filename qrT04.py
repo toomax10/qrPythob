@@ -1,3 +1,4 @@
+#Previous Code to Final qrT04.py which has the switch case conversion ...
 import qrcode
 from qrcode.image.styledpil import StyledPilImage
 from qrcode.image.styles.moduledrawers.pil import RoundedModuleDrawer

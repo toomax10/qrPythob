@@ -7,6 +7,8 @@ from qrcode.image.styles.colormasks import VerticalGradiantColorMask
 from qrcode.image.styles.colormasks import SolidFillColorMask
 from qrcode.image.styles.colormasks import ImageColorMask
 from PIL import Image, ImageDraw
+#This code is the final depuration with an OLD version of PYTHON which does NOT SUPPORT MATCH statement:
+# MATCH is like SWITCH, so here is implemented with if elseif .... :( 
 
 #To Remove CORTANA : Microsoft.549981C3F5F10 | Remove-AppxPackage
 URLtoCode = 'https://t.co/8Q3lo32NJ5'

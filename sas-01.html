@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Legislador</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"], input[type="email"], input[type="tel"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Formulario de Legislador</h1>
+
+  <form action="#" method="post">
+    <!-- Sección 1: Legislador -->
+    <fieldset>
+      <legend>Sección 1: Información del Legislador</legend>
+
+      <label for="nombre">Nombre del Legislador:</label>
+      <input type="text" id="nombre" name="nombre_legislador" required>
+
+      <label for="camara">Cámara Legislativa:</label>
+      <input type="text" id="camara" name="camara_legislativa" required>
+
+      <label for="cargo">Cargo:</label>
+      <input type="text" id="cargo" name="cargo" required>
+
+      <label for="comision">Comisión o Comité:</label>
+      <input type="text" id="comision" name="comision_comite">
+
+      <label for="grupo">Grupo Parlamentario:</label>
+      <input type="text" id="grupo" name="grupo_parlamentario">
+    </fieldset>
+
+    <!-- Sección 2: Contacto -->
+    <fieldset>
+      <legend>Sección 2: Información del Contacto</legend>
+
+      <label for="contacto">Nombre del Contacto:</label>
+      <input type="text" id="contacto" name="nombre_contacto">
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono">
+
+      <label for="extension">Extensión:</label>
+      <input type="text" id="extension" name="extension">
+
+      <label for="celular">Celular:</label>
+      <input type="tel" id="celular" name="celular">
+
+      <label for="correo">Correo institucional:</label>
+      <input type="email" id="correo" name="correo_institucional">
+    </fieldset>
+
+    <input type="submit" value="Enviar">
+  </form>
+</body>
+</html>

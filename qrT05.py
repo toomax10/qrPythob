@@ -1,3 +1,4 @@
+#pip install qrcode
 import qrcode
 from qrcode.image.styledpil import StyledPilImage
 from qrcode.image.styles.moduledrawers.pil import RoundedModuleDrawer
@@ -6,7 +7,8 @@ from qrcode.image.styles.colormasks import RadialGradiantColorMask
 from qrcode.image.styles.colormasks import VerticalGradiantColorMask
 from qrcode.image.styles.colormasks import SolidFillColorMask
 from qrcode.image.styles.colormasks import ImageColorMask
-from PIL import Image, ImageDraw
+#pip install Pillow
+from PIL import Image, ImageDraw, ImageFont
 #This code is the final depuration with an OLD version of PYTHON which does NOT SUPPORT MATCH statement:
 # MATCH is like SWITCH, so here is implemented with if elseif .... :( 
 
@@ -119,6 +121,15 @@ im = Image.open(imSt)
 mask = style_eyes( im )
 #img_ok = Image.composite( img_9_eyes, img_7, mask )
 img_ok = Image.composite( im, img_7, mask )
+
+#Add the URL text into the IMAGE - OK :
+fnt = ImageFont.truetype(r'arial.ttf', 13)
+txt = URLtoCode
+txt_color = ( 51, 102, 0 )
+print('text to write = ', txt)
+draw = ImageDraw.Draw(img_ok)
+draw.text((122, 345), txt, fill=txt_color, font = fnt, align ="center")
+#End drawing the text URL
 
 #img_1.save('img1.png')
 #img_2.save('img2.png')

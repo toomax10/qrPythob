@@ -13,7 +13,7 @@ from PIL import Image, ImageDraw, ImageFont
 # MATCH is like SWITCH, so here is implemented with if elseif .... :( 
 
 #To Remove CORTANA : Microsoft.549981C3F5F10 | Remove-AppxPackage
-URLtoCode = 'https://t.co/8Q3lo32NJ5'
+URLtoCode = 'https://t.co/dnpS1dYpGl'
 #$Bit$2025*  $Bit$2025*
 def style_eyes(img):
     img_size = img.size[0]
@@ -123,13 +123,25 @@ mask = style_eyes( im )
 img_ok = Image.composite( im, img_7, mask )
 
 #Add the URL text into the IMAGE - OK :
-fnt = ImageFont.truetype(r'arial.ttf', 13)
+fnt = ImageFont.truetype(r'arialbd.ttf', 13)
 txt = URLtoCode
+
 txt_color = ( 51, 102, 0 )
 print('text to write = ', txt)
+
 draw = ImageDraw.Draw(img_ok)
-draw.text((122, 345), txt, fill=txt_color, font = fnt, align ="center")
+txt_width = draw.textlength(txt, font=fnt)
+x0,y0,x1,y1 = img_ok.getbbox()
+xCtr = (x1-txt_width)//2
+draw.text(( xCtr, y1-25 ), txt, fill=txt_color, font = fnt, align ="center")
+
 #End drawing the text URL
+
+#txt_width, txt_height = draw.textsize(txt, font=fnt)
+print('width = ', txt_width)
+
+
+#print('bBox  = ', bbox )
 
 #img_1.save('img1.png')
 #img_2.save('img2.png')
